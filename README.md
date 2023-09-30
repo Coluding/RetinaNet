@@ -11,7 +11,7 @@ The authors use a FPN combined with a focal loss to tackle the class imbalance.
 They use a ResNet50 backbone and put a regression and classifciation head on top of the backbone.
 
 ----
-For my implementation I used a ResNet34 backbone due to GPU memory issues. Additionally, I used tzhe anchor offset 
+For my implementation I used a ResNet34 backbone due to GPU memory issues. Additionally, I used the anchor offset 
 computation proposed in the Yolov3 paper by: 
 - Center Coordinates:
     $$\[ b_x = \sigma(t_x) + c_x \]$$
@@ -23,3 +23,8 @@ computation proposed in the Yolov3 paper by:
 This stabled my gradients. I trained for a couple of epochs and was able to detect the correct objects.
 Unfortunately, the bounding boxes are not that accurate yet. here is an example:
 ![img.png](img.png)
+
+----
+There is still room for improvement. NMS has to be applied and the bounding box predictions can be more accurate. 
+My class accuracy is around 75% and no object accuracy is about 99%, which is already decent considering I trained only a couple hundred epochs with this small dataset.
+MAP is around 50% with a threshold of 0.3.
