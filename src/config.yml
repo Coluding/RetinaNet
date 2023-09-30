@@ -1,0 +1,68 @@
+TRAIN_DIR: "/home/lubi/Documents/Projects/private/concrete/retina_net/data2/train"
+TEST_DIR: "/home/lubi/Documents/Projects/private/concrete/retina_net/data2/test"
+VAL_DIR: "/home/lubi/Documents/Projects/private/concrete/retina_net/data2/val"
+
+STRIDES:
+  - 32
+  - 16
+  - 8
+
+CHANNEL_SCALES:
+  - 512
+  - 256
+  - 128
+
+EPOCHS: 100
+BATCH_SIZE: 16
+PIN_MEMORY: True
+NUM_WORKERS: 2
+DEVICE: "cuda"
+IMG_SIZE: 416
+NUM_CLASSES: 4
+TRAIN_BACKBONE: True
+LEARNING_RATE: 4e-6
+WEIGHT_DECAY: 1e-3
+NUM_ANCHORS: 9
+GAMMA: 2
+ALPHA: 0.25
+IOU_THRESHOLD: 0.3
+NMS_IOU_THRESH: 0.2
+CONF_THRESHOLD: 0.25
+SAVE_PATH: "my_checkpoint.pth.tar"
+LOAD_CHECKPOINT: True
+W1LOSS: 8
+W2LOSS: 4
+CLASS_LABELS:
+  - prohibitory
+  - danger
+  - mandatory
+  - other
+
+MEANS:
+  - 0.485
+  - 0.456
+  - 0.406
+STDS:
+  - 0.229
+  - 0.224
+  - 0.225
+
+ANCHORS:
+  - - - 0.28
+      - 0.22
+    - - 0.38
+      - 0.48
+    - - 0.9
+      - 0.78
+  - - - 0.07
+      - 0.15
+    - - 0.15
+      - 0.11
+    - - 0.14
+      - 0.29
+  - - - 0.02
+      - 0.03
+    - - 0.04
+      - 0.07
+    - - 0.08
+      - 0.06
