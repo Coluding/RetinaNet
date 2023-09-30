@@ -14,8 +14,8 @@ They use a ResNet50 backbone and put a regression and classifciation head on top
 For my implementation I used a ResNet34 backbone due to GPU memory issues. Additionally, I used tzhe anchor offset 
 computation proposed in the Yolov3 paper by: 
 - Center Coordinates:
-    $$\[ b_x = \sigma(t_x) + c_x \]$$
-    \[ b_y = \sigma(t_y) + c_y \]
+    $$\[ b_x = \sigma(t_x) + c_x \
+    \[ b_y = \sigma(t_y) + c_y \] $$
   - Width and Height:
     \[ b_w = p_w \cdot e^{t_w} \]
     \[ b_h = p_h \cdot e^{t_h} \]
