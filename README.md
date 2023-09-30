@@ -23,6 +23,7 @@ computation proposed in the Yolov3 paper by:
 This stabled my gradients. I trained for a couple of epochs and was able to detect the correct objects.
 Unfortunately, the bounding boxes are not that accurate yet. here is an example:
 ![img.png](img.png)
+![img_1.png](img_1.png)
 
 ----
 There is still room for improvement. NMS has to be applied and the bounding box predictions can be more accurate. 
